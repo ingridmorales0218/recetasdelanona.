@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+selector {
+    propiedad: valor;
+}
+.bitter-<uniquifier> {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+/*PALETA DE COLORES
+color:  ##212F3D (color oscuro);
+color: #EBDEF0 (color claro);
+color : #361444 (intermedio);
+color:#884ba0 (otro intermedio) ;
+*/
+/* estilos comunes para todo el documento */
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: #EBDEF0 ;
+    height: 300vh;
+}
+img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Estilos header*/
+header {
+  padding: 80px;
+  text-align: center;
+  background-image: url('../Img/Fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover
+}
+header div {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.29);
+    color:#EBDEF0 ;
+    font-size: 1.3rem;
+}
+@media (max-width: 800px) {
+    header {
+      background-position: center;
+    }
+}
+/*Estilos NAVBAR*/
+.d-flex {
+    background-color:rgba(0, 0, 0, 0.29);
+    font-size: 14px;
+}
+.form-control me-2{
+    font-size: 50px;
+}
+.NAVBAR {
+    display: flex;
+    justify-content: center;
+    background-color: #361444 ;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.NAVBAR a{
+    color:#EBDEF0;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+  .NAVBAR a :hover{
+    background-color: #884ba0 ;
+    color:#361444 ;
+}
+@media (max-width:800px) {
+    .NAVBAR {
+      flex-direction: column;
+      position: unset;
+}
+}
+.NAVBAR a {
+      text-align: center;
+}
+/* estilo parte principal */
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main {
+    flex-basis: 100%;
+    background-color: #EBDEF0; 
+    padding-left: 40px;
+    padding: 30px;
+  }
+  aside {
+    background-color: #9340f2;
+    text-align: center;
+    padding: 10px;
+  }
+  @media (max-width:800px) {
+    .principal {
+      flex-direction: column;
+    }
+  }
+  /*estilos aside*/
+.image img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+  }
+  .image:hover img{
+    transform: scale(1.07);
+  }
+  .asideTitle {
+    text-decoration: underline;
+  }
+  @media (max-width:800px) {
+    .image img {
+      width: 60%;
+      height: auto;
+    }
+  }
+  /* estilos main */
+  main h2 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #5D2A42;
+    text-align: center;
+  }
+  main h5 {
+    text-align: right;
+  }
+  main p{
+    font-style: italic;
+    font-size: 15px;
+    width: 100%;
+  }
+  main img {
+    width: 70%;
+    object-fit: cover;
+  }
+  main .leerMas {
+    background-color:#361444 ;
+    color: #EBDEF0 ;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    width: fit-content;
+  }
+  main .leerMas:hover {
+    background-color: #c892de ;
+    color:#361444 ;
+  }
+  .verMas {
+    display: block;
+    background-color:#361444 ;
+    color:#c892de ;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .verMas:hover{
+    background-color: #c892de;
+    color: #361444;
+  }
+  /* Estilos footer*/
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: #c892de;
+}
+/* Estilos formularios */
+form {
+    padding: 50px;
+    background-color: #FFF9EC;
+    text-align: center;
+    height: 100%;
+  }
+  label {
+    background-color: #5D2A42;
+    color: #FFF9EC;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  fieldset {
+    display: grid;
+    grid-template-columns: 40vw 30vw;
+    gap: 15px;
+    margin: auto;
+    width: fit-content;
+    font-size: 1.2rem;
+  }
+  @media (max-width:800px) {
+    fieldset {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  legend {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.3rem;
+  }
+  /* Estilos recetas */
+.container-fluid {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .receta {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FFF9EC;
+  }
+  .receta-iframe iframe {
+    width: 100%;
+    height: 50vh;
+  }
+  .receta img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  @media (max-width:800px) {
+  .carousel-item {
+    object-fit: contain;
+    height: auto;
+  } 
+}
+  .carousel-inner {
+    object-fit: contain;
+  }
+.imagenes {
+    width: 700px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 20px;
+}
+@media (max-width: 800px) {
+    .imagenes {
+        width: 60%;
+        height: auto;
+    }
+}
+.leerMas {
+    background-color:#361444 ;
+    color: #EBDEF0 ;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    width: fit-content;
+}
+/* Estilos cartas */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+  }
+  .card-title {
+    text-align: unset;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
